@@ -1,0 +1,21 @@
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    database: 4
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          lowerCaseServiceId: true
+          enabled: true
+      routes:
+        # 认证中心
+        - id: im-service
+          uri: lb://chat-server
+          predicates:
+            - Path=/test
+          filters:
+            # 验证码处理
+            - StripPrefix=1

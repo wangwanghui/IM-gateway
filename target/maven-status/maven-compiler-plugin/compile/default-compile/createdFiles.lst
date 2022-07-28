@@ -1,0 +1,3 @@
+com\cloud\gateway\entity\Test.class
+com\cloud\gateway\security\AuthFilter.class
+com\cloud\gateway\GatewayApplication.class
