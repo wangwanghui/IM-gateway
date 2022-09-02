@@ -1,8 +1,7 @@
 package com.octv.im.controller;
 
 import com.octv.im.entity.ChatHistoryBean;
-import com.octv.im.entity.DTO.ChatHistoryDTO;
-import org.springframework.stereotype.Controller;
+import com.octv.im.entity.dto.ChatHistoryDTO;
 import org.springframework.web.bind.annotation.*;
 
 

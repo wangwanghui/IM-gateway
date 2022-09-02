@@ -9,6 +9,6 @@ public interface RabbitConsumeService {
 
     void groupMessageConsume(Message message, Channel channel);
 
-    void clusterMessageDispatch(Message message, Channel channel);
+    //void clusterMessageDispatch(Message message, Channel channel);
 
 }

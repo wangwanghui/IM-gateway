@@ -13,12 +13,18 @@ spring:
     publisher-returns: true
     virtual-host: /
     #这个配置是保证消费者会消费消息，手动确认
-    listener:
-      simple:
-        acknowledge-mode: manual
-    template:
-      mandatory: true
-
+#    listener:
+#      simple:
+#        acknowledge-mode: manual
+#    template:
+#      mandatory: true
+  # 文件上传
+  servlet:
+    multipart:
+      # 单个文件大小
+      max-file-size:  200MB
+      # 设置总上传的文件大小
+      max-request-size:  500MB
   # redis 配置
   redis:
     # 地址 127.0.0.1
@@ -56,6 +62,13 @@ mybatis:
   # 加载全局的配置文件
   configLocation: classpath:mybatisMapper/config/mybatis-config.xml
 
+minio:
+  # minio配置是自定义的配置，注意：一定加http://
+  endpoint: http://114.132.77.125:9010
+  accessKey: admin
+  secretKey: wsh122966
+  bucketName: im-server
+
 # 聊天服务配置
 octv:
   im-chat-server:
@@ -66,4 +79,5 @@ octv:
     scheduled:
       check-active: "*/60 * * * * ?"  #多久检查一次存活的channel
       heart-beat: "*/30 * * * * ?"    #向连接的客户端发送心跳
+
 

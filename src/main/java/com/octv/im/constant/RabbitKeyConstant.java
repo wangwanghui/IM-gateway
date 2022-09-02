@@ -9,6 +9,7 @@ import java.net.UnknownHostException;
 import java.util.UUID;
 
 @Configuration
+@EventNode
 public class RabbitKeyConstant {
 
     public static final String GROUP_CHAT_EXCHANGE = "group.chat.exchange";

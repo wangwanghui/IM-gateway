@@ -9,6 +9,7 @@ import static com.octv.im.constant.RedisKeyConst.ONLINE_MEMBER_LIST_KEY;
 import com.alibaba.fastjson.JSONObject;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.octv.im.config.ChatServerProperties;
+import com.octv.im.constant.EventNode;
 import com.octv.im.service.RabbitProductService;
 import com.octv.im.util.ChatChannelManage;
 import com.octv.im.constant.ChatMessageConstant;
@@ -46,6 +47,7 @@ import java.util.*;
 
 @Service
 @Slf4j
+@EventNode
 public class WebSocketServiceImpl implements WebSocketService {
 
     // WebSocket 握手工厂类
